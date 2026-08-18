@@ -8,6 +8,13 @@ pipeline {
     }
 
     stages {
+        stage('Checkout') {
+            steps {
+                script {
+                    scmCheckout()
+                }
+            }
+        }
         stage('Build') {
             steps {
                 script {
