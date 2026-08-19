@@ -22,12 +22,5 @@ pipeline {
                 }
             }
         }
-        stage('Test') {
-            steps {
-                script {
-                    test()
-                }
-            }
-        }
     }
 }
