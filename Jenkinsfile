@@ -22,5 +22,12 @@ pipeline {
                 }
             }
         }
+        stage ('Download from the artifactory') {
+            steps {
+                script {
+                    download()
+                }
+            }
+        }
     }
 }
