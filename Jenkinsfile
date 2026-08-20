@@ -15,7 +15,7 @@ pipeline {
                 }
             }
         }
-        stage('Build') {
+        stage('Deploy to the Artifactory') {
             steps {
                 script {
                     deploy()
