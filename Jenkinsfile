@@ -23,5 +23,12 @@ pipeline {
                 }
             }
         }
+        stage('Deploy and download from the artifactory') {
+            steps {
+                script {
+                    deploy_download_copytotomcat()
+                }
+            }
+        }
     }
 }
