@@ -1,4 +1,4 @@
-@Library('Practice_Shared_Library') _
+@Library('Practice_Shared_Librar') _
 pipeline {
 
     agent { label 'slave_node' }
@@ -14,8 +14,6 @@ pipeline {
                     scmCheckout()
                 }
             }
-        
-
         
         }
         stage('Build') {
