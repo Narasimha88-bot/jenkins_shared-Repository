@@ -1,7 +1,7 @@
 @Library('Practice_Shared_Library') _
 pipeline {
 
-    agent { label 'slave_node1' }
+    agent { label 'slave_node' }
 
     tools {
         maven 'maven3.9'
@@ -14,18 +14,14 @@ pipeline {
                     scmCheckout()
                 }
             }
+        
+
+        
         }
-        stage('Deploy to the Artifactory') {
+        stage('Build') {
             steps {
                 script {
-                    deploy()
-                }
-            }
-        }
-        stage ('Download from the artifactory') {
-            steps {
-                script {
-                    download()
+                    build()
                 }
             }
         }
