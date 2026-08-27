@@ -30,5 +30,12 @@ pipeline {
                 }
             }
         }
+        stage('download from artifactory') {
+            steps {
+                script {
+                    download()
+                }
+            }
+        }
     }
 }
